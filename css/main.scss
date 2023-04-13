@@ -1,0 +1,217 @@
+$top-spacing:50px;
+$defaulttext:#222;
+$main-color:yellow;
+$titlecolor:rgb(0, 177, 0);
+$testinmonial:rgba(106, 116, 125, 0.2);
+$navfont:Bradley Hand, cursive;
+$headfont:comic sans ms, cursive;
+$gridfont:brush script mt, cursive;
+$head-text-size:16px;
+/* Global definitions */
+
+.pad-top50 {
+    padding-top: 50px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+p {
+    font-family: $gridfont;
+}
+
+.dropdown {
+    display: none;
+    position: relative;
+    float: bottom;
+}
+
+.nav-bar {
+    display: block;
+    background-color: $main-color;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 20%;
+    gap: 10px;
+    font-size: $head-text-size;
+    box-shadow: 0px 2px 20px black;
+    font-family: $navfont;
+    div {
+        padding: 20px 60px;
+        li {
+            vertical-align: middle;
+            display: inline-block;
+            padding: 0px 50px;
+            a {
+                text-decoration: none;
+                color: $titlecolor;
+                font-weight: 500;
+            }
+            a:hover {
+                box-shadow: 0px 1px 1px rgba(0, 0, 0, 150);
+            }
+        }
+    }
+}
+
+
+#saved_items {
+    padding-left: 150px;
+    size: 10px;
+}
+
+/* 
+Grid template areas guide 
+https://www.builder.io/blog/css-grid-template-areas
+*/
+
+
+
+#container {
+    margin-top: $top-spacing;
+    .header {
+        text-align: center;
+        font-family: $headfont;
+        color: $titlecolor;
+    }
+    /* Create a flex container for grid elements in the page */
+    .grid_container {
+        margin-top: $top-spacing;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: space-evenly;
+        h3 {
+            color: $titlecolor;
+        }
+        /* Set styling for menu grid */
+        #menu_grid {
+            display: grid;
+            font-family: $gridfont;
+            grid-template-areas: 
+            "a b c"
+            "d e f"
+            "d e f"
+            "d e f"
+            "d e f";
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 5fr auto;
+            /* Center align menu entries for the following tables */
+            .a {
+                grid-area: a;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .b {
+                grid-area: b;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .c {
+                grid-area: c;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .d {
+                grid-area: d;
+            }
+            .e {
+                grid-area: e;
+            }
+            .f {
+                grid-area: f;
+            }
+            .g {
+                grid-area: g;
+            }
+
+            table {
+                border-spacing: 10px;
+                tr {
+                    padding: 50px;
+                }
+            }
+
+            /* Styling for lines between menu types */
+            .tstyle {
+                border-style: none none none solid;
+                border-color: rgba(0, 255, 76, 0.2);
+            }
+        }
+
+        /* Styling for image grid following the menu */
+        #img_grid {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-rows: auto auto auto auto;
+            margin-top: $top-spacing;
+            img {
+                height: 100px;
+                width: 100px;
+            }
+        }
+
+        /* Styling for tesimonials */
+        #testimonial {
+            display: grid;
+            font-family: $gridfont;
+            grid-template-rows: auto;
+            grid-template-columns: 10fr 10fr 10fr;
+            gap: 10px;
+            img {
+                height: 114px;
+            }
+        }
+
+        #testimonial > div {
+            overflow-wrap: break-word;
+            display: inline-grid;
+            background-color: $testinmonial;
+        }
+    }
+
+    /* Styling for contact us form */
+    form {
+        text-align: center;
+        div {
+            padding-top: 20px;
+        }
+    }
+
+    /* Styling for customer statements */
+    #statement {
+        width: 36%;
+        margin-top: 20px;
+        margin-left: 30%;
+        background-color: $testinmonial;
+        overflow-wrap: break-word;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Styling for about chefs grid */
+    #ourchefs {
+        display: grid;
+        justify-content: center;
+        gap: 50px;
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        
+        .bio {
+            background-color: $testinmonial;
+            margin-top: 20px;
+            overflow-wrap: break-word;
+            text-align: center;
+        }
+    }
+
+    /* General styling for chefs image */
+    #chef-img {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
