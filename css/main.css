@@ -183,4 +183,19 @@ https://www.builder.io/blog/css-grid-template-areas
 #container #chef-img {
   margin-top: 20px;
   text-align: center;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.like {
+  background-color: rgb(0, 177, 0);
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.count {
+  padding-left: 2px;
+  text-transform: bold;
+}
+
+/*# sourceMappingURL=main.css.map */

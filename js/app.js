@@ -16,6 +16,7 @@ function save_function() {
 
 
 $(document).ready(() => {
+    let count = 0;
     $(".drop-item").hover(function () {
         // Create the dropdown element and append it to the target element.
         let dropdiv = document.createElement("DIV");
@@ -55,6 +56,11 @@ $(document).ready(() => {
         $('.dropdown').slideToggle(function () {
             $('*').remove('.dropdown');
         })
+    });
+
+    $(".like").click(function() {
+        count++;
+        $(".count").text(count);
     });
 
 
