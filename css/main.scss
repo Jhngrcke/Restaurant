@@ -214,4 +214,19 @@ https://www.builder.io/blog/css-grid-template-areas
         margin-top: 20px;
         text-align: center;
     }
+
+    // Like button styling
+    .like {
+        background-color: rgb(0, 177, 0);
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      // Make like count stand out a bit.
+      .count {
+        padding-left: 2px;
+        text-transform: bold;
+      }
 }

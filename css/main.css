@@ -184,18 +184,14 @@ https://www.builder.io/blog/css-grid-template-areas
   margin-top: 20px;
   text-align: center;
 }
-
-.like {
+#container .like {
   background-color: rgb(0, 177, 0);
   color: #fff;
   padding: 5px 10px;
   border: none;
   cursor: pointer;
 }
-
-.count {
+#container .count {
   padding-left: 2px;
   text-transform: bold;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
