@@ -16,6 +16,7 @@ function save_function() {
 
 
 $(document).ready(() => {
+    let count = 0;
     $(".drop-item").hover(function () {
         // Create the dropdown element and append it to the target element.
         let dropdiv = document.createElement("DIV");
@@ -75,6 +76,12 @@ $(document).ready(() => {
             });
         });
     });
+
+    $(".like").click(function() {
+        count++;
+        $(".count").text(count);
+    });
+
 
     if (!window.sessionStorage.length) {
         $('#saved_items').append('<p>You have no saved items</p>');
