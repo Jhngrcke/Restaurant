@@ -183,4 +183,14 @@ https://www.builder.io/blog/css-grid-template-areas
 #container #chef-img {
   margin-top: 20px;
   text-align: center;
+}
+#container .comment_form {
+  padding-top: 50px;
+}
+
+/* Create styling for tmp element */
+#tmp {
+  color: rgb(0, 177, 0);
+  text-align: center;
+  display: block;
 }/*# sourceMappingURL=main.css.map */

@@ -57,6 +57,24 @@ $(document).ready(() => {
         })
     });
 
+    $(".comment_form").on("submit", (ev) => {
+        ev.preventDefault();
+        let name = $("input[name='username']").val();
+        let surname = $("input[name='surname']").val();
+        let comment = $("#commentbox").val();
+        // Clear the form.
+        ev.target.reset();
+        // I wanted a way to let the user know their comment has been submitted for review
+        // https://stackoverflow.com/questions/2765945/jquery-remove-append-after-5-seconds
+        // The second answer in this form was ideal. 
+        $(".comment_form").append("<span id='tmp'><span>");
+        $("#tmp").delay(100).fadeOut(200, function() {
+            $(this).html(`Dear ${name} ${surname}, your comment has been submitted for curation. Thank you.`).fadeIn(200).fadeOut(5000, function() {
+                // Remove the element as a callback after the fadeOut function has been completed.
+                $("#tmp").remove();
+            });
+        });
+    });
 
     if (!window.sessionStorage.length) {
         $('#saved_items').append('<p>You have no saved items</p>');

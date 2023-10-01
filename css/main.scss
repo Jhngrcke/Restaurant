@@ -214,4 +214,16 @@ https://www.builder.io/blog/css-grid-template-areas
         margin-top: 20px;
         text-align: center;
     }
+
+    .comment_form {
+        padding-top: $top-spacing;
+    }
+
+}
+
+/* Create styling for tmp element */
+#tmp {
+    color: $titlecolor;
+    text-align: center;
+    display: block;
 }
